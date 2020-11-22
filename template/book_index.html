@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Recommendation System</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<h2>Recommends System for Books</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST" >
+		<p>You Book!</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="2" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+    <br>
+    <br>
+    <br>
+		{{ prediction_text  }}
+    <br>
+    <br>
+    {{ prediction_text1 }}
+    <br>
+    {{ prediction_text2 }}
+    <br>
+    {{ prediction_text3 }}
+    <br>
+    {{ prediction_text4 }}
+    <br>
+    {{ prediction_text5 }}
+
+	</form>
+		
+	</div>
